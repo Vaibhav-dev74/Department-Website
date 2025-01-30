@@ -1,0 +1,288 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+
+body {
+  background-image: linear-gradient(to right, #7cf897, #a8f8a0, #c8f8ae, #e0f8c1, #f1f9d8, #eff9dd, #edf9e2, #edf8e7, #d7f6e0, #baf5e1, #97f3ea, #6feffb);
+}
+/* STAFF DIV */
+.facultyHolder {
+  display: flex;
+  justify-content: space-evenly;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  word-wrap: break-word;
+  border-radius: 10px;
+  border: 2px solid #FFD700;
+  border-style: outset;
+  padding-left: 18px;
+  box-sizing: border-box;
+  flex: 1 1 300px;
+  max-width: 700px;
+  /* margin: 10px; */
+  padding: 15px;
+}
+
+div {
+  display: block;
+}
+
+img {
+  float: left;
+}
+
+.qualify {
+  padding: 0 10px 0 20px;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  color: #142d65;
+}
+
+.qualificationHolder {
+  box-sizing: border-box;
+  margin: 0px auto;
+}
+
+.qualif {
+  font-size: 2rem;
+}
+
+.qualificationHolder::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.marks-container {
+  border-radius: 10px;
+  padding: 20px;
+  width: 28.1vw;
+  height: 5vh;
+  animation: highlight 2s infinite;
+  color: #1962ff;
+  display: flex;
+  margin-top: 4vh;
+}
+
+@keyframes highlight {
+  0% {
+    text-shadow: 0 0 10px rgb(255, 0, 0);
+  }
+
+  50% {
+    text-shadow: 0 0 20px rgb(0, 255, 0);
+  }
+
+  75% {
+    text-shadow: 0 0 10px rgb(0, 0, 255);
+  }
+
+  100% {
+    text-shadow: 0 0 10px rgb(253, 253, 253);
+  }
+}
+
+.show-marks-button {
+  background-color: #4441f7;
+  color: white;
+  /* border: none; */
+  height: 2.3rem;
+  padding: 0.3rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  box-sizing: border-box;
+
+}
+
+.show-marks-button:hover {
+  background-color: #34d4fc;
+}
+
+.header1 {
+  display: flex;
+}
+
+h1 {
+  font-size: xx-large;
+}
+
+/* Responsive styles */
+
+@media screen and (max-width: 400px) {
+  .facultyHolder {
+    flex-basis: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: auto;
+    flex-flow: wrap;
+    width: 100%;
+    margin-left: 50px;
+  }
+
+  .top_right_content {
+    row-gap: 20px;
+  }
+
+  .content {
+    margin-right: 10px;
+  }
+}
+
+#page_title {
+  font-size: 3vw;
+}
+
+h3 {
+  font-size: 2vw;
+}
+
+.btn {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 1vh;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+/* AB CSS  */
+
+#header {
+  display: flex;
+  justify-content: center;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  height: 90px;
+  align-items: center;
+  background: linear-gradient(to right,
+      rgba(46, 139, 87, 0.3) 0%,
+      #7FFFD4 25%,
+      #FFFF99 50%,
+      #FFFF99 50%);
+  width: 40vw;
+  border-radius: 5px;
+  border: 2px solid rgb(67, 104, 160);
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+
+  text-align: center;
+}
+
+.head h1 {
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  width: 30vw;
+  size: 100px;
+  font-weight: bolder;
+  padding: 10px 10px;
+  border-radius: 4px;
+  position: relative;
+  z-index: 69;
+  color: rgb(0, 0, 7);
+}
+
+@media only screen and (max-width: 775px) {
+  .heading {
+    width: 90vw;
+    margin-left: 0;
+  }
+
+  .head h1 {
+    width: 80vw;
+  }
+
+  .marks-container {
+    width: 100vw;
+    margin: 0;
+  }
+
+  .header1 {
+    flex-direction: column-reverse;
+  }
+
+  .marks-container {
+    order: 1;
+  }
+
+  #header {
+    order: 2;
+  }
+
+}
+
+.imga {
+  height: 30vh;
+  width: auto;
+  border: 2px solid rgb(240, 29, 240);
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 800px) {
+  .imga {
+    height: auto;
+    max-height: 30vh;
+    width: 100%;
+  }
+}
+
+
+.tit {
+  font-size: 1.3rem;
+  margin-top: 1vh;
+}
+
+.pqual {
+  color: #0b338a;
+  margin: 3vh 0vh 1vh;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.young-serif-regular {
+  font-family: "Young Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.facultyContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.facultyCard {
+  background-color: #faefdb;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  margin: 20px;
+}

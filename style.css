@@ -1,0 +1,413 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: block;
+    box-sizing: border-box;
+}
+
+/* BELOW NAVBAR FIRST */
+
+.header-l {
+    height: 40px;
+    width: 55%;
+    border: 2px solid rgb(3, 116, 22);
+    background-color: rgb(140, 246, 130);
+    font-weight: 900;
+    font-size: larger;
+    margin-left: 25%;
+    margin-left: 25%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+
+}
+
+
+/* BELOW SLOGAN  */
+
+.text-section {
+    max-width: 90vw;
+    margin: 3vh auto;
+    padding: 20px;
+    background-color: #ffffff73;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.text-section h2 {
+    color: black;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px #FF0000;
+}
+
+.text-section hr {
+    border: none;
+    height: 2px;
+    background-color: #FF0000;
+    margin: 20px auto;
+    width: 50%;
+}
+
+.text-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.text-section ul li {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.text-section ul li::before {
+    content: "\2022";
+    color: #FF0000;
+    font-size: 20px;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.ulpmain {
+    display: flex;
+    gap: 3vw;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.ulpmain img {
+    height: 53vh;
+}
+
+.ulpmain .image {
+    height: 53vh;
+    width: auto;
+}
+
+.image {
+    width: 20vw;
+    border: 3px solid blueviolet;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 4);
+
+}
+
+
+/* BELOW TEXT-SECTION PART */
+
+.highlight-section {
+    max-width: 90vw;
+    margin: 3vh auto;
+    padding: 20px;
+    background-color: #ffffff73;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.highlight-section h2 {
+    color: black;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.highlight-section ul {
+    padding: 0;
+}
+
+.highlight-section li {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: black;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.highlight-section li::before {
+    content: "\2022";
+    color: #00b300;
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* MEDIA QUERY FOR TECT-SECTION AND HEIGHLIGHT-SEC  */
+
+.box {
+    justify-content: space-between;
+}
+
+@media only screen and (width: 1024px) {
+    .videoleft video {
+        width: 6vw;
+    }
+
+    .slogan {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (width: 540px) {
+    .videoleft video {
+        width: 10vw;
+    }
+
+    .slogan {
+        font-size: 12px;
+        font-weight: 600;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .text-section {
+        margin: 5vh auto;
+    }
+
+    .text-section h2 {
+        font-size: 24px;
+    }
+
+    .text-section hr {
+        width: 70%;
+    }
+
+    .text-section ul li {
+        font-size: 1.3rem;
+    }
+
+    .image {
+        width: 50vw;
+    }
+
+    .slogan {
+        margin-left: 6vw;
+        margin-right: 5vw;
+        font-size: 1.0rem;
+    }
+
+    .highlight-section {
+        margin: 5vh auto;
+    }
+
+    .highlight-section h2 {
+        font-size: 22px;
+    }
+
+    .highlight-section li {
+        font-size: 1.3rem;
+    }
+
+
+    @property --b {
+        syntax: '<angle>';
+        inherits: false;
+        initial-value: 0deg;
+    }
+
+    @keyframes animate {
+        0% {
+            --b: 0deg;
+        }
+
+        100% {
+            --b: 360deg;
+        }
+    }
+
+    .box::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: repeating-conic-gradient(from var(--b), #aa2352 0%, #aa2352 5%, transparent 5%, transparent 40%, #aa2352 50%);
+        border-radius: 20px;
+        animation: animate 4s linear infinite;
+        animation-delay: -1s;
+    }
+
+    .box::after {
+        content: '';
+        position: absolute;
+        inset: 4px;
+        background: #41c24c;
+        border-radius: 15px;
+        border: 3px solid #25252b;
+    }
+
+    .slogan {
+        position: absolute;
+        top: 50%;
+        margin-left: 23.25%;
+        transform: translate(-50%, -50%);
+        color: black;
+        font-size: 14px;
+        font-weight: bold;
+        z-index: 1;
+        width: 80%;
+        height: 60%;
+
+    }
+
+    .box {
+        position: relative;
+        width: 93vw;
+        height: 12vh;
+        background: repeating-conic-gradient(from var(--b), #a3aa23 0%, #a3aa23 5%, transparent 5%, transparent 40%, #a3aa23 50%);
+        border-radius: 20px;
+        animation: animate 4s linear infinite;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        margin-left: 3vw;
+        top: 1vh;
+    }
+
+    .slogan {
+        display: flex;
+        align-items: center;
+        margin-left: 13.4vw;
+        height: 49%;
+    }
+
+    .videoleft {
+        flex: 0 0 auto;
+        margin-left: 0vw;
+    }
+
+    .sloganp {
+        flex: 1;
+        letter-spacing: 0.45vw;
+    }
+
+    .videoleft video {
+
+        width: 18vw;
+    }
+}
+
+
+/*  */
+@media only screen and (max-width: 400px) {
+    .slogan {
+        font-size: 11px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .ulpmain {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image {
+        width: 80vw;
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1400px) {
+    .slogan {
+        width: 70vw;
+    }
+
+    .box {
+        width: 90vw;
+        margin-left: 4vw;
+        display: flex;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    video {
+        width: 12vw;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    video {
+        width: 4vw;
+    }
+}
+/*    */
+
+
+/* RESPONSIVE DIV FOR MAP */
+
+.map {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+    justify-content: space-around;
+    gap: 50px;
+}
+
+iframe {
+    overflow-clip-margin: content-box;
+}
+
+@media(max-width:768px) {
+    .resp {
+        display: block;
+        width: 80%;
+    }
+   .resp iframe{
+
+       display: block;
+       width: 90%;
+       width: 800vw;
+   }
+}
+@media screen and (max-width:290px) {
+    .resp {
+        display: block;
+        width: 30%;
+        box-sizing: border-box;
+        margin-right:  200px;
+        border: 1ps solid black;
+    }
+    iframe{
+        width: px;
+    }
+}
+
+@media(row-gap:50px) {
+    .add {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+
+/* RECURITUR DIV PART*/
+
+.recruiter-head-style {
+    font-size: 30px;
+    color: black;
+    margin-bottom: 5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.recruiter-marquee {
+    height: 100px;
+}
+
+.recruiter-marquee img {
+    height: 80px;
+    width: 140px;
+}
